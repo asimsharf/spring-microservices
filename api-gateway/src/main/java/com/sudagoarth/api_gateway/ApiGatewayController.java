@@ -8,6 +8,7 @@ public class ApiGatewayController {
 
     @GetMapping
     public String home() {
+
         return "🚀 API Gateway is running!";
     }
 }
