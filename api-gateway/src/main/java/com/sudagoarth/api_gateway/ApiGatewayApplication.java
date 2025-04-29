@@ -9,13 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @EnableDiscoveryClient
 public class ApiGatewayApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ApiGatewayApplication.class, args);
-	}
-
-	@GetMapping
-	public String hello() {
-		return "Hello from API Gateway!";
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ApiGatewayApplication.class, args);
+    }
 
 }
