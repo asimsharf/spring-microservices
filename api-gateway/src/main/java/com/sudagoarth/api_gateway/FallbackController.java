@@ -1,5 +1,8 @@
 package com.sudagoarth.api_gateway;
 
+import com.sudagoarth.common.response.ApiResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FallbackController {
 
     @RequestMapping("/fallback/user-service")
-    public String userServiceFallback() {
-        return "User Service is currently unavailable. Please try again later.";
+    public ResponseEntity<ApiResponse<Void>> userServiceFallback() {
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(ApiResponse.error("User Service is currently unavailable. Please try again later."));
     }
 }

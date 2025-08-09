@@ -13,10 +13,8 @@ public class LocalizedData {
     private String english;
 
 
-//    public static LocalizedData fromString(String data) {
-//        return LocalizedData.builder()
-//                .arabic(data)
-//                .english(data)
-//                .build();
-//    }
+    public static LocalizedData of(String ar, String en) {
+        return LocalizedData.builder().arabic(ar).english(en).build();
+    }
+
 }
